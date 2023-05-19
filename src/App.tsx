@@ -1,5 +1,3 @@
-import './App.css'
-import selfitBg from "./assets/selfit-bg.jpg";
 import selfitBg2 from "./assets/selfit-bg2.jpg";
 import { Form } from "./components/Form";
 

@@ -1,8 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { max } from "class-validator";
-
 
 const formSchema = z.object({
     nome: z.string()
@@ -41,9 +39,8 @@ export const Form = () => {
         console.log(data)
     }
 
-
     return (
-        <div className="w-3/6 h-[580px] bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[425px]:w-[303px] max-[425px]:h-[900px]">
+        <div className="w-3/6 h-[580px] bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[425px]:w-[303px] max-[425px]:h-[900px] max-[425px]:mt-60">
             <h2 className="text-4xl text-gray-100 font-bold font-roboto">CADASTRO SELFIT</h2>
 
             <form onSubmit={handleSubmit(formUser)} autoComplete="off">
@@ -73,7 +70,7 @@ export const Form = () => {
                                     {...register("cpf", {valueAsNumber: true})}
                                 />
                             </div>
-                            {errors.cpf?.message && <span className="text-center ml-8 text-xs text-yellow-400 max-[1260px]:text-start max-[1260px]:ml-16">{errors.cpf?.message}</span>}
+                            {errors.cpf?.message && <span className="text-center ml-8 text-xs text-yellow-400 max-[1260px]:text-start max-[1260px]:ml-16 max-[425px]:mt-1 max-[425px]:ml-12">{errors.cpf?.message}</span>}
                         </div>
 
                         <div className="flex flex-col text-center h-6 max-[1260px]:h-10">
