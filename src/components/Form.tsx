@@ -40,11 +40,11 @@ export const Form = () => {
     }
 
     return (
-        <div className="w-3/6 h-[580px] flex flex-col justify-center items-center bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[425px]:w-[300px] max-[425px]:h-[900px] max-[425px]:mt-60">
+        <div className="w-3/6 h-[580px] flex flex-col justify-center items-center bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[450px]:w-[300px] max-[450px]:h-[900px] max-[425px]:mt-60">
             <h2 className="text-4xl text-gray-100 font-bold font-roboto">CADASTRO SELFIT</h2>
 
             <form onSubmit={handleSubmit(formUser)} autoComplete="off">
-                <fieldset className="h-[430px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[425px]:w-[260px] max-[425px]:p-2 max-[425px]:h-[700px]">
+                <fieldset className="h-[430px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[425px]:w-[260px] max-[425px]:p-2 max-[450px]:h-[730px]">
                     <legend className="text-gray-100 font-semibold">Dados Pessoais</legend>
                     <div className="text-center h-8 max-[1260px]:h-10 max-[1100px]:mb-3">
                         <div className="flex max-[1100px]:flex-col text-start">
@@ -91,7 +91,7 @@ export const Form = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col text-center h-6 max-[1260px]:h-8 max-[1060px]:h-6 max-[900px]:mb-6 max-[425px]:gap-1">
+                    <div className="flex flex-col text-center h-6 max-[1260px]:h-8 max-[1060px]:h-6 max-[900px]:mb-6  max-[425px]:gap-1 max-[450px]:mb-8">
                         <div className="mb-1 max-[900px]:flex flex-col text-start">
                             <label className="text-gray-100 font-bold" htmlFor="nascimento">Data de Nascimento:</label>
                             <input className="ml-2 rounded-md bg-gray-100 outline-none px-1 max-[900px]:ml-0"
@@ -103,7 +103,7 @@ export const Form = () => {
                         {errors.nascimento?.message && <span className="ml-40 text-xs text-yellow-400 max-[900px]:ml-0">{errors.nascimento.message}</span>}
                     </div>
 
-                    <div className="flex flex-col text-center h-8 mt-2 max-[1260px]:mt-0 max-[900px]:mb-3 max-[425px]:mt-1 max-[425px]:mb-0">
+                    <div className="flex flex-col text-center h-8 mt-2 max-[1260px]:mt-0 max-[900px]:mb-3 max-[425px]:mt-1 max-[450px]:mb-0">
                         <div className="max-[1060px]:flex flex-col items-start justify-start">
                             <label className="text-gray-100 font-bold" htmlFor="endereço">Endereço:</label>
                             <input className="ml-2 rounded-md bg-gray-100 outline-none px-1 max-[1050px]:items-start max-[1060px]:ml-0 max-[900px]:w-60"
@@ -116,7 +116,7 @@ export const Form = () => {
                         {errors.endereco?.message && <span className="ml-24 text-xs text-yellow-400 max-[1260px]:ml-6">{errors.endereco.message}</span>}
                     </div>
 
-                    <div className="flex h-6 max-[1260px]:flex-col gap-6 max-[1260px]:h-12 max-[1260px]:mb-10 max-[1060px]:mt-3 max-[425px]:gap-10 max-[425px]:mb-20">
+                    <div className="flex h-6 max-[1260px]:flex-col gap-6 max-[1260px]:h-12 max-[1260px]:mb-10 max-[1060px]:mt-3 max-[450px]:gap-10 max-[450px]:mb-20">
                         <div className="flex flex-col max-[1260px]:h-10">
                             <div className="flex max-[1260px]:h-12">
                                 <div>
@@ -159,13 +159,13 @@ export const Form = () => {
                                         />
                                     </div>
                                 </div>
-                            {errors.celular?.message && <span className="text-center ml-16 text-xs text-yellow-400 max-[1024px]:text-start max-[425px]:text-start max-[425px]:ml-20">{errors.celular.message}</span>}
+                            {errors.celular?.message && <span className="text-center ml-16 text-xs text-yellow-400 max-[1024px]:text-start max-[1024px]:ml-24 max-[425px]:text-start max-[425px]:ml-20">{errors.celular.message}</span>}
                         </div>
-                        <div className="flex flex-col text-center h-10">
+                        <div className="flex flex-col text-center h-10 max-[450px]:items-center">
                             <div className="max-[1260px]:h-12">
-                                <div className="max-[425px]:flex flex-col items-start">
+                                <div className="max-[450px]:flex flex-col items-start">
                                     <label className="text-gray-100 font-bold" htmlFor="email">E-mail:</label>
-                                    <input className="ml-2 rounded-md bg-gray-100 outline-none px-1 max-[800px]:w-48 max-[425px]:ml-0"
+                                    <input className="ml-2 rounded-md bg-gray-100 outline-none px-1 max-[800px]:w-48 max-[450px]:ml-0"
                                         type="email"
                                         id="email"
                                         size={30}
