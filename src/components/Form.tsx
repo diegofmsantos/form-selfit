@@ -40,13 +40,13 @@ export const Form = () => {
     }
 
     return (
-        <div className="w-3/6 h-[580px] bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[425px]:w-[303px] max-[425px]:h-[900px] max-[425px]:mt-60">
+        <div className="w-3/6 h-[580px] flex flex-col justify-center items-center bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[425px]:w-[300px] max-[425px]:h-[900px] max-[425px]:mt-60">
             <h2 className="text-4xl text-gray-100 font-bold font-roboto">CADASTRO SELFIT</h2>
 
             <form onSubmit={handleSubmit(formUser)} autoComplete="off">
-                <fieldset className="h-[440px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[425px]:w-[260px] max-[425px]:p-3 max-[425px]:h-[720px]">
+                <fieldset className="h-[430px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[425px]:w-[260px] max-[425px]:p-2 max-[425px]:h-[700px]">
                     <legend className="text-gray-100 font-semibold">Dados Pessoais</legend>
-                    <div className="text-center h-12 max-[1260px]:h-10 max-[1100px]:mb-3">
+                    <div className="text-center h-8 max-[1260px]:h-10 max-[1100px]:mb-3">
                         <div className="flex max-[1100px]:flex-col text-start">
                             <label className="text-gray-100 font-bold" htmlFor="nome">Nome Completo:</label>
                             <input className="ml-2 rounded-md bg-gray-100 outline-none px-1 max-[1100px]:ml-0 max-[900px]:w-60"
@@ -179,7 +179,7 @@ export const Form = () => {
 
                 </fieldset>
 
-                <button className="my-5 border border-gray-200 py-2 px-16 rounded-md text-red-800 bg-gray-100 font-bold text-lg hover:bg-gray-300 hover:text-red-600 hover:border-red-600" type="submit">Enviar</button>
+                <button className="my-3 border border-gray-200 py-2 px-16 rounded-md text-red-800 bg-gray-100 font-bold text-lg hover:bg-gray-300 hover:text-red-600 hover:border-red-600" type="submit">Enviar</button>
 
             </form>
         </div>
