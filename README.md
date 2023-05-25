@@ -1,3 +1,10 @@
 # Formulário Selfit
+## Projeto feito como método de estudo.
 
-Projeto feito em React + Typescript usando React Hook Form + Zod + Tailwind.
+### Tecnologias utilizadas:
+- React (React Hook Form)
+- Typescript
+- Tailwind
+- Zod
+
+![SelfitForm](https://github.com/diegofmsantos/form-selfit/assets/105954958/927952dc-a141-442e-bfd4-2700fd38a518)
