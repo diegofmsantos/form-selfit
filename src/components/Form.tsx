@@ -40,11 +40,11 @@ export const Form = () => {
     }
 
     return (
-        <div className="w-3/6 h-[580px] flex flex-col justify-center items-center bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[400px]:w-[300px] max-[700px]:w-[350px] max-[700px]:h-[900px] max-[700px]:mt-60">
+        <div className="w-3/6 h-[580px] flex flex-col justify-center items-center bg-red-700 bg-opacity-90 text-center p-2 rounded-[20px] max-[1260px]:mt-60 max-[1260px]:mb-8 max-[1260px]:h-[765px] max-[900px]:h-[800px] max-[900px]:mt-28 max-[400px]:w-[300px] max-[700px]:w-[350px] max-[700px]:h-[880px] max-[700px]:mt-60">
             <h2 className="text-4xl text-gray-100 font-bold font-roboto">CADASTRO SELFIT</h2>
 
             <form onSubmit={handleSubmit(formUser)} autoComplete="off">
-                <fieldset className="h-[430px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[400px]:w-[280px] max-[700px]:w-[300px] max-[700px]:p-2 max-[700px]:h-[730px]">
+                <fieldset className="h-[430px] flex flex-col items-start gap-8 p-4 border border-gray-200 text-left mt-2 mx-2 max-[1260px]:h-[620px] max-[900px]:h-[640px] max-[400px]:w-[280px] max-[700px]:w-[300px] max-[700px]:p-2 max-[700px]:h-[700px]">
                     <legend className="text-gray-100 font-semibold">Dados Pessoais</legend>
                     <div className="text-center h-8 max-[1260px]:h-10 max-[1100px]:mb-3">
                         <div className="flex max-[1100px]:flex-col text-start">
@@ -116,7 +116,7 @@ export const Form = () => {
                         {errors.endereco?.message && <span className="ml-24 text-xs text-yellow-400 max-[1260px]:ml-6">{errors.endereco.message}</span>}
                     </div>
 
-                    <div className="flex h-6 max-[1260px]:flex-col gap-6 max-[1260px]:h-12 max-[1260px]:mb-10 max-[1060px]:mt-3 max-[700px]:gap-10 max-[700px]:mb-20">
+                    <div className="flex h-6 max-[1260px]:flex-col gap-6 max-[1260px]:h-12 max-[1260px]:mb-10 max-[1060px]:mt-3 max-[700px]:gap-6 max-[700px]:mb-12">
                         <div className="flex flex-col max-[1260px]:h-10">
                             <div className="flex max-[1260px]:h-12">
                                 <div>
@@ -131,7 +131,7 @@ export const Form = () => {
                         </div>
 
                         <div className="flex flex-col max-[1260px]:h-10">
-                            <div className="flex max-[1260px]:h-12">
+                            <div className="flex">
                                 <div>
                                     <label className="text-gray-100 font-bold" htmlFor="cidade">Cidade:</label>
                                     <input className="ml-2 rounded-md bg-gray-100 outline-none px-1"
