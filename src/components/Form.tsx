@@ -1,28 +1,27 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import InputMask from "react-input-mask";
+
 
 const formSchema = z.object({
     nome: z.string()
     .nonempty('Digite seu nome.'),
-    cpf: z.coerce.number({
-        invalid_type_error: 'Digite seu cpf.'
-    }).max(11, {message: 'Máximo de 11 caracteres.'}),
+    cpf: z.string()
+    .nonempty('Digite seu cpf.'),
     sexo: z.string({
         invalid_type_error: 'Escolha seu sexo.'
-    })
-    .nonempty('Escolha seu sexo.'),
-    nascimento: z.number({
-        invalid_type_error: 'Digite sua data de nascimento.'
     }),
-    endereco: z.string().nonempty('Digite seu endereço.'),
-    numero: z.number({
-        invalid_type_error: 'Digite o número.'
-    }),
-    cidade: z.string().nonempty('Digite sua cidade.'),
-    celular: z.number({
-        invalid_type_error: 'Digite seu celular.'
-    }),
+    nascimento: z.string()
+    .nonempty('Digite sua data de nascimento.'),
+    endereco: z.string()
+    .nonempty('Digite seu endereço.'),
+    numero: z.string()
+    .nonempty('Digite o número.'),
+    cidade: z.string()
+    .nonempty('Digite sua cidade.'),
+    celular: z.string()
+    .nonempty('Digite seu número.'),
     email: z.string()
     .nonempty('Digite seu e-mail.')
     .email('Formato de e-mail inválido.')
@@ -35,6 +34,7 @@ export const Form = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<inputs>({
         resolver: zodResolver(formSchema)
     });
+
     function formUser(data: any) {
         console.log(data)
     }
@@ -64,13 +64,13 @@ export const Form = () => {
                         <div className="flex flex-col max-[1260px]:h-10">
                             <div className="max-[1260px]:h-12">
                                 <label className="text-gray-100 font-bold" htmlFor="cpf">CPF:</label>
-                                <input className="w-36 ml-2 mr-2 rounded-md bg-gray-100 outline-none px-1 text-black"
-                                    type="number"
+                                <InputMask mask={'999.999.999-99'} className="w-36 ml-2 mr-2 rounded-md bg-gray-100 outline-none px-1 text-black"
+                                    type="text"
                                     id="cpf"
-                                    {...register("cpf", {valueAsNumber: true})}
+                                    {...register("cpf")}
                                 />
                             </div>
-                            {errors.cpf?.message && <span className="text-center ml-8 text-xs text-yellow-400 max-[1260px]:text-start max-[1260px]:ml-16 max-[700px]:mt-1 max-[700px]:ml-20">{errors.cpf?.message}</span>}
+                            {errors?.cpf?.message && <span className="text-center ml-8 text-xs text-yellow-400 max-[1260px]:text-start max-[1260px]:ml-16 max-[700px]:mt-1 max-[700px]:ml-20">{errors.cpf?.message}</span>}
                         </div>
 
                         <div className="flex flex-col text-center h-6 max-[1260px]:h-10">
@@ -151,7 +151,7 @@ export const Form = () => {
                                 <div className="max-[1260px]:h-12">
                                     <div>
                                         <label className="text-gray-100 font-bold" htmlFor="celular">Celular:</label>
-                                        <input className="ml-2 rounded-md bg-gray-100 outline-none px-1"
+                                        <InputMask mask={'(99)99999-9999'} className="ml-2 rounded-md bg-gray-100 outline-none px-1"
                                             type="tel"
                                             id="celular"
                                             size={12}
